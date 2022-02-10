@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+/**
+ *
+ */
+
+/**
+ * @author Bowen
+ *
+ */
+public class ShoppingCartPrinter {
+
+	/**
+	 * @param args
+	 */
+
+
+	public static void main(String[] args) {
+
+		Scanner scnr = new Scanner(System.in);
+
+
+
+		String itemName = "";
+		int itemPrice = 0;
+		int itemQuantity = 0;
+		char menuChoice = '?';
+
+		ArrayList<ItemToPurchase> CartContents = new ArrayList<ItemToPurchase>();
+
+		while(menuChoice != 'q'){
+			System.out.println("Choose an option:");
+			System.out.println("a - Add item to cart");
+			System.out.println("d - Remove item from cart");
+			System.out.println("c - Change item quantity");
+			System.out.println("i - Output items' descriptions");
+			System.out.println("o - Output shopping cart");
+			System.out.println("q - Quit");
+
+			menuChoice = scnr.next().charAt(0);
+
+			switch(menuChoice) {
+				case 'a':
+					ShoppingCartManager.addItem(CartContents);
+					break;
+				case 'd':
+					ShoppingCartManager.removeItem();
+					break;
+				case 'c':
+					ShoppingCartManager.changeItemQuantity();
+					break;
+				case 'i':
+					ShoppingCartManager.outputItemDescriptions();
+					break;
+				case 'o':
+					ShoppingCartManager.outputShoppingCart();
+					break;
+				case 'q':
+					break;
+			}
+		}
+	}
+}
