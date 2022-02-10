@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Cat
+{
+	//Fields - Attributes
+	private int catSpaceNumber;
+	//Cosntructor
+	
+	public Cat(String petName, int petAge, int dogSpace, int catSpace, int stayDays, double amountDue, int catSpaceNumber)
+}
+	//Super class calling Pet//
+	super(petName, petAge, dogSpace, catSpace, stayDays, amountDue);
+	//setting variables values
+	this.catSpaceNumber = catSpaceNumber;
+	
+}
+
+	//Cat space number
+	public int getCatSpaceNumber()
+{
+	return catSpaceNumber;
+	
+	public void setCatSpaceNumber(int catSpaceNumber)
+	
+	{
+		this.catSpaceNumber = catSpaceNumber;
+	}
+}
